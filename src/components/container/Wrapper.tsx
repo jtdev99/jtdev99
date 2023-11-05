@@ -1,19 +1,19 @@
 import { Outlet } from "react-router-dom";
 
-import { Header, Sidebar } from "../../layout";
+import { Sidebar } from "../../layout";
 
 const Wrapper = () => {
     return (
-        <main>
+        <main className="main">
             {/* Start sidebar */}
             <Sidebar />
             {/* End sidebar */}
             {/* Start main section */}
-            <section>
-                {/* Header */}
-                <Header />
-                {/* Page */}
-                <Outlet />
+            <section className="section">
+                <div className="section-page">
+                    {/* Page */}
+                    <Outlet />
+                </div>
             </section>
             {/* End main section */}
         </main>

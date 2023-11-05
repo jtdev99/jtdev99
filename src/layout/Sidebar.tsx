@@ -5,36 +5,49 @@ import { MdContacts } from "react-icons/md";
 
 const Sidebar = () => {
     return (
-        <aside>
+        <aside className="sidebar">
             {/* Logo */}
             <div className="sidebar-logo">
-                <Link to="/">Jt</Link>
+                <Link
+                    className="text-4xl font-bold text-black dark:text-white"
+                    to="/"
+                >
+                    Jt
+                </Link>
             </div>
             {/* Nav */}
             <nav className="sidebar-nav">
                 <ul className="sidebar-list">
                     <li className="sidebar-item">
-                        <NavLink to="/" end>
-                            <GoHomeFill />
-                            <span className="capitalize">home</span>
+                        <NavLink className="sidebar-link" to="/" end>
+                            <span className="sidebar-link-icon">
+                                <GoHomeFill />
+                            </span>
+                            <span className="sidebar-link-text">home</span>
                         </NavLink>
                     </li>
                     <li className="sidebar-item">
-                        <NavLink to="/about">
-                            <FaUser />
-                            <span className="capitalize">about</span>
+                        <NavLink className="sidebar-link" to="/about">
+                            <span className="sidebar-link-icon">
+                                <FaUser />
+                            </span>
+                            <span className="sidebar-link-text">about</span>
                         </NavLink>
                     </li>
                     <li className="sidebar-item">
-                        <NavLink to="/blog">
-                            <FaBlogger />
-                            <span className="capitalize">blog</span>
+                        <NavLink className="sidebar-link" to="/blog">
+                            <span className="sidebar-link-icon">
+                                <FaBlogger />
+                            </span>
+                            <span className="sidebar-link-text">blog</span>
                         </NavLink>
                     </li>
                     <li className="sidebar-item">
-                        <NavLink to="/contact">
-                            <MdContacts />
-                            <span className="capitalize">contact</span>
+                        <NavLink className="sidebar-link" to="/contact">
+                            <span className="sidebar-link-icon">
+                                <MdContacts />
+                            </span>
+                            <span className="sidebar-link-text">contact</span>
                         </NavLink>
                     </li>
                 </ul>
