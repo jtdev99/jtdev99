@@ -6,32 +6,32 @@
 
 /* Main */
 .main {
-    @apply w-full h-screen flex flex-col-reverse md:flex-row overflow-hidden bg-gray-200 dark:bg-gray-800;
+    @apply w-full h-screen flex flex-col-reverse sm:flex-row overflow-hidden bg-white dark:bg-black text-black dark:text-gray-100;
 }
 
 /* Sidebar */
 .sidebar {
-    @apply w-full md:w-64 p-4 overflow-y-auto bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex-shrink-0 z-20 transition-transform ease-in-out duration-300 md:transition-none;
+    @apply w-full sm:w-auto lg:w-64 p-2 lg:p-4 overflow-y-auto flex-shrink-0 z-20 transition-transform ease-in-out duration-300 sm:transition-none sm:border-r border-t sm:border-t-0 border-black dark:border-gray-100;
 }
 
 .sidebar[data-is-show="false"] {
-    @apply -translate-x-full md:-translate-x-0;
+    @apply -translate-x-full sm:-translate-x-0;
 }
 
 .sidebar-logo {
-    @apply hidden md:block;
+    @apply hidden sm:block;
 }
 
 .sidebar-nav {
-    @apply md:py-4 md:mt-4;
+    @apply sm:py-4 sm:mt-4;
 }
 
 .sidebar-list {
-    @apply flex md:flex-col justify-center md:justify-normal gap-2;
+    @apply flex sm:flex-col justify-center sm:justify-normal gap-2;
 }
 
 .sidebar-link {
-    @apply flex items-center justify-center md:justify-normal flex-col md:flex-row gap-2 px-2 py-4 leading-none font-semibold rounded-lg flex-shrink-0 w-16 h-16 md:w-full md:h-fit;
+    @apply flex items-center justify-center lg:justify-normal gap-4 p-4 leading-none font-semibold rounded-lg flex-shrink-0 w-12 h-12 lg:w-full lg:h-fit;
 }
 
 .sidebar-link.active {
@@ -43,12 +43,12 @@
 }
 
 .sidebar-link-text {
-    @apply capitalize;
+    @apply hidden lg:block capitalize;
 }
 
 /* Section */
 .section {
-    @apply relative flex flex-col flex-1 overflow-y-auto text-gray-900 dark:text-gray-100 p-4;
+    @apply relative flex flex-col flex-1 overflow-y-auto text-black dark:text-gray-100 p-4;
 }
 
 .section-page {
